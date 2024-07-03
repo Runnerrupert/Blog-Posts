@@ -21,6 +21,21 @@ function initStoredBlogs(){
 function submitForm(){
   console.log("Submitted form!");
 
+  const blogUsername = formUsername.value;
+  const blogTitle = formTitle.value;
+  const blogContent = formContent.value;
+
+  if (blogUsername === "" || blogTitle === "" || blogContent === ""){
+    const errorMsg = document.createElement("p");
+    formSelect.appendChild(errorMsg);
+    errorMsg.setAttribute('id', 'error');
+    errorMsg.textContent = "Please fill in all sections";
+
+    console.log("Form incomplete");
+
+    return;
+  }
+
   const blogs = {
     username: formUsername.value.trim(),
     title: formTitle.value.trim(),
@@ -34,6 +49,8 @@ function submitForm(){
   formContent.value = "";
 
   localStorage.setItem('myBlogs', JSON.stringify(myBlogs));
+
+  redirectPage("file:///E:/bootcamp/Challenge-4/blog.html")
 }
 // TODO: Add an event listener to the form on submit. Call the function to handle the form submission.
 
