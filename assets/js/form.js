@@ -20,6 +20,20 @@ function initStoredBlogs(){
 
 function submitForm(){
   console.log("Submitted form!");
+
+  const blogs = {
+    username: formUsername.value.trim(),
+    title: formTitle.value.trim(),
+    content: formContent.value.trim()
+  }
+
+  myBlogs.push(blogs);
+
+  formUsername.value = "";
+  formTitle.value = "";
+  formContent.value = "";
+
+  localStorage.setItem('myBlogs', JSON.stringify(myBlogs));
 }
 // TODO: Add an event listener to the form on submit. Call the function to handle the form submission.
 
@@ -27,7 +41,7 @@ formSelect.addEventListener('click', function(event) {
   event.preventDefault();
 
   const element = event.target;
-  if (element.matches('input')) {
+  if (element.matches('input[type=submit]')) {
     submitForm();
   }
 })
