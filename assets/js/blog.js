@@ -1,4 +1,7 @@
 // TODO: Create a variable that selects the main element
+const mainSelector = document.querySelector("#main");
+const backButton = document.querySelector("#back");
+const listSelector = document.querySelector("#list");
 
 // TODO: Create a function that builds an element and appends it to the DOM
 
