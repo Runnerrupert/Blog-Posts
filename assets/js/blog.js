@@ -60,6 +60,12 @@ function initBlogs() {
     checkBlogs();
 }
 
+// Add an eventListener to redirect the page back to index.html when the back button is pressed.
+
+backButton.addEventListener('click', function(){
+    redirectPage("file:///E:/bootcamp/Challenge-4/index.html");
+})
+
 // TODO: Call the function to render the list of blog posts
 
 initBlogs();
