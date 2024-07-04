@@ -10,14 +10,21 @@ let blogs;
 function renderBlogs(){
 
     // Create variables to hold created elements for ease of access
-    const li = document.createElement('li');
-    const article = document.createElement('article');
-    const p = document.createElement('p');
-    const blockquote = document.createElement('blockquote');
-    const h2 = document.createElement('h2');
+    // const li = document.createElement('li');
+    // const article = document.createElement('article');
+    // const p = document.createElement('p');
+    // const blockquote = document.createElement('blockquote');
+    // const h2 = document.createElement('h2');
 
     // Loop through each item in the blogs object array and set content for blog creation
     for (let i = 0; i < blogs.length; i++){
+        // Create variables to hold created elements for ease of access
+        const li = document.createElement('li');
+        const article = document.createElement('article');
+        const p = document.createElement('p');
+        const blockquote = document.createElement('blockquote');
+        const h2 = document.createElement('h2');
+        
         const username = blogs[i].username;
         const title = blogs[i].title;
         const content = blogs[i].content;
