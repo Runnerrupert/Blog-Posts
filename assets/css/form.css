@@ -17,6 +17,18 @@ aside {
   align-items: center;
 }
 
+.dark aside {
+  background: linear-gradient(
+    var(--light-accent), 
+    var(--dark-circle-color), 
+    var(--dark-accent)
+  );
+  clip-path: circle(20rem at center);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 aside, 
 section {
   flex: 1 1 50%;

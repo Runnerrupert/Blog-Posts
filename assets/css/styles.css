@@ -62,6 +62,7 @@ ul {
   --disabled: #aaa;
   --error: #ff0022;
   --circle-color: #ffb100;
+  --dark-circle-color: #2FA1BF;
 }
 
 * {
