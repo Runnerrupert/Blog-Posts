@@ -27,10 +27,8 @@ lightDarkToggle.addEventListener('click', function(event){
         }
     }
 })
-// TODO: Create logic to toggle the light/dark mode styles for the page and circle. The mode should be saved to local storage.
 
 // Updates the page to be light or dark whenever the button is pressed or the page is opened
-
 function updateLocalStorage(){
     if (toggle === "dark") {
         lightDark.setAttribute('class', "dark");
@@ -43,23 +41,19 @@ function updateLocalStorage(){
     }
 }
 
-// TODO: Create functions to read and write from local storage
 
 // Gets the local storage and returns it
-
 function getToggleLocalStorage(element){
     const mode = localStorage.getItem(element);
     return mode;
 }
 
 // Sets the local storage
-
 function setToggleLocalStorage(element, variable){
     localStorage.setItem(element, variable);
 }
 
 // Function for redirecting the URL
-
 let redirectURL = '';
 
 const redirectPage = function (url) {

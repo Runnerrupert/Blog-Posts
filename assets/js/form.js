@@ -1,12 +1,11 @@
-// TODO: Create a variable that selects the form element
+// Creates class selectors for form.html
 const formSelect = document.querySelector("#form");
 const formUsername = document.querySelector("#username");
 const formTitle = document.querySelector("#title");
 const formContent = document.querySelector("#content");
 
+// Object array to hold all blog objects
 let myBlogs = [];
-
-// TODO: Create a function that handles the form submission. Grab the form data and store it in local storage, then redirect to the blog page using the redirectPage function. If the form is submitted with missing data, display an error message to the user.
 
 // Initializes myBlogs array with anything that might be in local storage.
 function initStoredBlogs(){
@@ -20,7 +19,6 @@ function initStoredBlogs(){
 
 
 // Checks to see if all sections are filled in. Creates a new blog object and pushes it to an array, stores the array in local storage and redirects the page to blog.html
-
 function submitForm(){
   console.log("Submitted form!");
 
@@ -55,8 +53,8 @@ function submitForm(){
 
   redirectPage("file:///E:/bootcamp/Challenge-4/blog.html")
 }
-// TODO: Add an event listener to the form on submit. Call the function to handle the form submission.
 
+// Add an eventListener for when the submit button is pressed
 formSelect.addEventListener('click', function(event) {
   event.preventDefault();
 
@@ -66,4 +64,5 @@ formSelect.addEventListener('click', function(event) {
   }
 })
 
+// Initializes the first function
 initStoredBlogs();
