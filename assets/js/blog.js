@@ -56,7 +56,7 @@ function initBlogs() {
 // Add an eventListener to redirect the page back to index.html when the back button is pressed.
 
 backButton.addEventListener('click', function(){
-    redirectPage("file:///E:/bootcamp/Challenge-4/index.html");
+    redirectPage("https://runnerrupert.github.io/Challenge-4/index.html");
 })
 
 // Calls the initializer function

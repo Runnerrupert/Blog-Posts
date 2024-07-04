@@ -4,7 +4,7 @@ const formUsername = document.querySelector("#username");
 const formTitle = document.querySelector("#title");
 const formContent = document.querySelector("#content");
 
-// Object array to hold all blog objects
+// Object array to hold all blog objects.
 let myBlogs = [];
 
 // Initializes myBlogs array with anything that might be in local storage.
@@ -51,7 +51,7 @@ function submitForm(){
 
   localStorage.setItem('myBlogs', JSON.stringify(myBlogs));
 
-  redirectPage("file:///E:/bootcamp/Challenge-4/blog.html")
+  redirectPage("https://runnerrupert.github.io/Challenge-4/blog.html")
 }
 
 // Add an eventListener for when the submit button is pressed
