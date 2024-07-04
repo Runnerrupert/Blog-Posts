@@ -1,4 +1,3 @@
-// TODO: Create a variable that selects the main element
 const mainSelector = document.querySelector("#main");
 const backButton = document.querySelector("#back");
 const listSelector = document.querySelector("#list");
@@ -37,7 +36,7 @@ function checkBlogs(){
     if (blogs === undefined) {
         const noBlogs = document.createElement('p');
         mainSelector.appendChild(noBlogs);
-        noBlogs.textContent = "You have no blogs";
+        noBlogs.textContent = "No Blog posts yet...";
         noBlogs.setAttribute('style', "font-size: 24px");
     } else {
         renderBlogs();

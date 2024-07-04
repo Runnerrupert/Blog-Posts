@@ -20,7 +20,6 @@ function initStoredBlogs(){
 
 // Checks to see if all sections are filled in. Creates a new blog object and pushes it to an array, stores the array in local storage and redirects the page to blog.html
 function submitForm(){
-  console.log("Submitted form!");
 
   const blogUsername = formUsername.value;
   const blogTitle = formTitle.value;
@@ -30,9 +29,7 @@ function submitForm(){
     const errorMsg = document.createElement("p");
     formSelect.appendChild(errorMsg);
     errorMsg.setAttribute('id', 'error');
-    errorMsg.textContent = "Please fill in all sections";
-
-    console.log("Form incomplete");
+    errorMsg.textContent = "Please complete the form.";
 
     return;
   }
