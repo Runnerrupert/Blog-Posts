@@ -37,6 +37,18 @@ function renderBlogs(){
 
 // TODO: Create a function that handles the case where there are no blog posts to display
 
+// Checks if the blogs object array is empty, if it is, then it creates a message in the main element
+function checkBlogs(){
+    if (blogs === undefined) {
+        const noBlogs = document.createElement('p');
+        mainSelector.appendChild(noBlogs);
+        noBlogs.textContent = "You have no blogs";
+        noBlogs.setAttribute('style', "font-size: 24px");
+    } else {
+        renderBlogs();
+    }
+}
+
 // TODO: Create a function that reads from local storage and returns the data
 
 function initBlogs() {
@@ -45,7 +57,7 @@ function initBlogs() {
     if (storedBlogs !== null){
         blogs = storedBlogs;
     }
-    renderBlogs();
+    checkBlogs();
 }
 
 // TODO: Call the function to render the list of blog posts
