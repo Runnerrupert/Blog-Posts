@@ -57,6 +57,5 @@ function setToggleLocalStorage(element, variable){
 let redirectURL = '';
 
 const redirectPage = function (url) {
-  redirectURL = url;
   location.assign(url);
 };
